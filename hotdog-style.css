@@ -1,0 +1,15 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body{
+	background-color: antiquewhite;
+	font-family: futura;
+}
+
+
+.header {
+	background-color: red;
+	color: yellow;
+	max-width: 500px;
+	text-align: center;
+}
