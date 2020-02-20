@@ -30,37 +30,42 @@
 	<div class="header"> <h1> Welcome to Joe's Hotdogs!</h1> </div>
 	<h2> Your Order: </h2>
 	
+	<div class="body1">
 	<script language="javascript">
 				
 		document.write("# of Hotdogs: " + dogs + " at $3.25 is $" + dogsPrice +		"<br>");
 		document.write("# of Fries: " + fries + " at $2.00 is $" + friesPrice  + 	"<br>");
 		document.write("# of Drinks: " + drinks + " at $1.50 is $" + drinksPrice + 	"<br>");
 				
-		var price = fullPrice
 		
 		if(fullPrice > 20){
 			document.write("You qualify for our 10% off discount! <br>");
 			var discount = fullPrice*.1;
-			price = fullPrice-discount;
+			fullPrice = fullPrice-discount;
 		} else {
 			document.write("You do not qualify for our 10% discount. <br>")
 		}
-			
-		price = (Math.round(price * 100) / 100).toFixed(2);
-		price = parseFloat(price);
-		document.write("Subtotal: $" + price + "<br>");
+		</script>
+	
+		</div> <br> 
 		
-		var tax = price*.0625;
-		tax = (Math.round(tax * 100) / 100).toFixed(2);
-		tax = parseFloat(tax);
-		document.write("Meal Tax: $" + tax + "<br>");
+	<div class="body2">
+		<script language="javascript">
+	
+		var subtotal = (Math.round(fullPrice * 100) / 100).toFixed(2);
+		document.write("Subtotal: $" + subtotal + "<br>");
 		
-		price = price+tax;
-		price = (Math.round(price * 100) / 100).toFixed(2);
-		document.write("Total: $" + price);
+		var tax = fullPrice*.0625;
+		var displayTax = (Math.round(tax * 100) / 100).toFixed(2);
+		document.write("Meal Tax: $" + displayTax + "<br>");
+		
+		fullPrice= tax+fullPrice
+		var finalPrice = (Math.round(fullPrice * 100) / 100).toFixed(2);
+		document.write("Total: $" + finalPrice);
 		
 	</script>
 	
+	</div>
 	
 
 </body>

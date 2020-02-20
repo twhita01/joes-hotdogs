@@ -11,5 +11,27 @@ body{
 	background-color: red;
 	color: yellow;
 	max-width: 500px;
-	text-align: center;
+	text-align: center;		
+}
+
+.body1 {
+	outline-style:dotted;
+	outline-color: red;
+	outline-width: 2px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	max-width: 500px;
+
+}
+
+.body2 {
+	outline-style:dashed;
+	outline-color: yellow;
+	outline-width: 6px;
+	padding: 10px 10px 10px 10px;
+	max-width: 500px;
+	font-size: 18px;
+	background-color: red;
+	color: yellow;
 }
